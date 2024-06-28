@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prueba de Ionicons</title>
+    <link rel="stylesheet" href="/styleprueba.css">
+    <link rel="stylesheet" href="https://unpkg.com/ionicons@5.0.1/dist/ionicons/css/ionicons.min.css">
+    <style>
+        .icon {
+            font-size: 48px;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <!-- <header class="header">
+        <div class="logo">
+            <img src="/images/logo.png" alt="Logo de la marca">
+        </div>
+        <nav>
+                       
+        </nav>
+        <a class="btn" href="#"><button>Contact</button></a>
+    </header> -->
+
+    <header class="header">
+        <div class="logo">
+            <a href="./"><img src="/images/logo.png" alt="Logo" id="logo"></a>
+        </div>
+        <div>
+            <button id="myButton">Audio Ayuda!</button>
+            <audio id="audioPlayer" src="/images/audioayudainicio.mp3"></audio>
+        </div>
+        <div>
+            <input type="text" id="searchInput" placeholder="Buscar...">
+            <button id="searchBtn">Buscar</button>
+        </div>
+        <div class="container">
+            <label class="switch" for="checkbox">
+                <input type="checkbox" id="checkbox" />
+                <div class="slider round"></div>
+            </label>
+        </div>
+        <div>     
+            <button class="button">
+                <svg viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+                <path d="M140,128a12,12,0,1,1-12-12A12,12,0,0,1,140,128ZM128,72a12,12,0,1,0-12-12A12,12,0,0,0,128,72Zm0,112a12,12,0,1,0,12,12A12,12,0,0,0,128,184Z"></path></svg>
+            </button>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="/login">Iniciar sesión</a></li>
+                <li><a href="#">Perfil</a></li>
+                <li><a href="#">About</a></li>
+           </ul>
+        </nav>
+        <div class="logo">
+            <a href="/cart" id="cart"><img src="/images/icono-carrito.png" alt=""><span id="cuenta-carrito">0</span></a>
+        </div>
+    </header>
+    
+</body>
+</html>

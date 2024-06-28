@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gaming Store</title>
+    <link rel="icon" href="/images/logo.png" type="image/png">
+    <link rel="stylesheet" href="/style2.css">
+    <link rel="stylesheet" href="/indexbicis.css">
+    <script src="/productosService.js" defer></script>
+	<script src="/cartService.js" defer></script>
+    <script src="/index2.js" defer></script>
+</head>
+<body>
+    <div id="cookie-consent" class="cookie-consent">
+        <p>Este sitio web utiliza cookies para garantizar que obtengas la mejor experiencia en nuestro sitio web.</p>
+        <button id="accept-cookies">Aceptar cookies</button>
+    </div>
+    <div id="privacy-notice" class="privacy-notice">
+        <div class="privacy-content">
+            <p>Esta página utiliza cookies y otras tecnologías para garantizar la mejor experiencia posible. Al continuar utilizando nuestro sitio, aceptas nuestra <a href="/privacy-policy">Política de Privacidad</a>.</p>
+            <button id="accept-privacy">Aceptar</button>
+        </div>
+    </div>  
+    <div id="loading-screen" class="loading-screen" style="display: none;">
+        <div class="spinner"></div>
+    </div>  
+    <header class="header">
+        <div class="logo">
+            <a href="./"><img src="/images/logo.png" alt="Logo" id="logo" style="height: 70px;"></a>
+        </div>
+        <div>
+            <button id="myButton">Audio Ayuda!</button>
+            <audio id="audioPlayer" src="/images/audioayudainicio.mp3"></audio>
+        </div>
+        <div>
+            <input type="text" id="searchInput" placeholder="Buscar...">
+            <div id="suggestions" class="suggestions"></div>
+            <button id="searchBtn">Buscar</button>
+        </div>
+        <div class="container">
+            <label class="switch" for="checkbox">
+                <input type="checkbox" id="checkbox" />
+                <div class="slider round"></div>
+            </label>
+        </div>
+        <div>     
+            <button class="button">
+                <svg viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+                <path d="M140,128a12,12,0,1,1-12-12A12,12,0,0,1,140,128ZM128,72a12,12,0,1,0-12-12A12,12,0,0,0,128,72Zm0,112a12,12,0,1,0,12,12A12,12,0,0,0,128,184Z"></path></svg>
+            </button>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="/login">Iniciar sesión</a></li>
+                <li><a href="#">Perfil</a></li>
+                <li><a href="#">About</a></li>
+            </ul>
+        </nav>
+        <div class="logo">
+            <a href="/cart" id="cart"><img src="/images/icono-carrito.png" alt=""><span id="cuenta-carrito">0</span></a>
+        </div>
+    </header>
+    <main>
+        <h1 id="flotantes">
+            <span>J</span>
+            <span>u</span>
+            <span>e</span>
+            <span>g</span>
+            <span>o</span>
+            <span>s</span>
+        </h1>
+        <section id="productos-container">
+        </section>
+        <div id="productDetailsModal" class="modal" style="display:none;">
+            <div class="modal-content1">
+                <span class="close">&times;</span>
+                <div id="product-details"></div>
+            </div>
+        </div>                
+    </main>
+        <div id="settingsModal" class="modal" style="display:none;">
+            <div class="modal-content2">
+            <span class="close">&times;</span>
+            <h2>Ajustes</h2>
+            <label for="fontSize">Tamaño de la letra:</label>
+            <input type="range" id="fontSize" min="50" max="200">
+            <label for="bgColor">Color de fondo:</label>
+            <input type="color" id="bgColor">
+            <label for="zoomLevel">Zoom de visualización:</label>
+            <input type="range" id="zoomLevel" min="50" max="200">
+            </div>
+        </div>
+      
+    <footer>
+        <p>Creado por Yahya <a href="https://tameformacion.com/" target="_blank">- TAME</a></p>
+        
+    </footer>
+</body>
+</html>

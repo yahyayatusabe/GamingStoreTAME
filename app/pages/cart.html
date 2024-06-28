@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style2.css">
+    <link rel="stylesheet" href="/cart.css">
+	<script src="/bicicletas.js"></script>
+  <script src="/cartService.js" defer></script>
+	<script src="/cart.js" defer></script>
+  <title>Gaming Store</title>
+  <link rel="icon" href="/images/logo.png" type="image/png">
+</head>
+<body>
+  <header class="header">
+    <div class="logo">
+        <a href="./"><img src="/images/logo.png" alt="Logo" id="logo" style="height: 70px;;"></a>
+    </div>
+    <div>
+        <button id="myButton">Audio Ayuda!</button>
+        <audio id="audioPlayer" src="/images/audioayudacart.mp3"></audio>
+    </div>
+    <div class="container">
+        <label class="switch" for="checkbox">
+            <input type="checkbox" id="checkbox" />
+            <div class="slider round"></div>
+        </label>
+    </div>
+    <div>     
+        <button class="button">
+            <svg viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+            <path d="M140,128a12,12,0,1,1-12-12A12,12,0,0,1,140,128ZM128,72a12,12,0,1,0-12-12A12,12,0,0,0,128,72Zm0,112a12,12,0,1,0,12,12A12,12,0,0,0,128,184Z"></path></svg>
+        </button>
+    </div>
+    <nav>
+        <ul class="nav-links">
+            <li><a href="/login">Iniciar sesión</a></li>
+            <li><a href="#">Perfil</a></li>
+       </ul>
+    </nav>
+    <div class="logo">
+        <a href="/cart" id="cart"><img src="/images/icono-carrito.png" alt=""><span id="cuenta-carrito">0</span></a>
+    </div>
+</header>
+	<main>
+		<p id="carrito-vacio">Ups! El carrito está vacío, <a href="./">elige algunos productos</a></p>
+		<section id="cart-container">
+		</section>
+  <section id="totales">
+    <p>Total unidades: <span id="cantidad">0</span></p>
+    <p>Total precio: €<span id="precio">0</span></p>
+    <button id="comprar">Comprar</button>
+    <button id="reiniciar">Reiniciar</button>
+  </section>
+</main>
+	<footer>
+    <p>Creado por Yahya <a href="https://tameformacion.com/" target="_blank">- TAME</a></p>
+	</footer>
+</body>
+</html>

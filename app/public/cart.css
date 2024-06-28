@@ -1,0 +1,110 @@
+:root {
+    --color-acento: #ee6130;
+    --color-acento-claro: #ee613033;
+    --color-fondo-tarjeta: #e0e0e0; /* Fondo más grisáceo para las tarjetas */
+}
+
+/* Estilo para todos los botones */
+button {
+    background-color: var(--color-acento);
+    color: white; /* Asegura que el texto sea legible */
+    border: none; /* Opcional: elimina el borde por defecto */
+    padding: 16.9px 33.8px; /* Ajustado para mantener la proporción */
+    border-radius: 5px; /* Opcional: agrega bordes redondeados */
+    cursor: pointer; /* Opcional: cambia el cursor al pasar por encima */
+    font-size: 16px; /* Aumenta el tamaño del texto */
+}
+
+#cart-container {
+    max-width: 845px; /* Aumentado para reflejar el incremento del tamaño */
+    margin: auto;
+    margin-top: 20px
+}
+
+.tarjeta-producto {
+    display: flex;
+    align-items: center;
+    height: 169px; /* Aumentado en un 30% */
+    gap: 33.8px; /* Ajustado para mantener la proporción */
+    padding: 8.45px; /* Ajustado para mantener la proporción */
+    background-color: var(--color-fondo-tarjeta); /* Fondo de color para las tarjetas */
+    border-radius: 10px; /* Agrega bordes redondeados a las tarjetas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Agrega sombra a las tarjetas */
+    margin-bottom: 20px; /* Espacio inferior entre las tarjetas */
+}
+
+.tarjeta-producto img {
+    height: 169px; /* Aumentado en un 30% */
+    width: 169px; /* Aumentado en un 30% */
+    object-fit: cover; /* Asegura que la imagen cubra el contenedor sin distorsión */
+}
+
+.tarjeta-producto h3 {
+    font-size: 22px; /* Aumenta el tamaño del precio */
+    width: 219.7px; /* Aumentado en un 30% */
+}
+p {
+    font-size: 18px; /* Aumenta el tamaño del precio */
+}
+.tarjeta-producto div {
+    background-color: var(--color-acento-claro);
+    padding: 5.07px; /* Ajustado para mantener la proporción */
+    border-radius: 5px;
+}
+
+#totales {
+    text-align: center;
+}
+
+#carrito-vacio {
+    text-align: center;
+}
+/* Estilo para el interruptor */
+.switch {
+    display: inline-block;
+    height: 34px;
+    position: relative;
+    width: 60px;
+  }
+  
+  .switch input {
+    display: none;
+  }
+  
+  .slider {
+    background-color: #ccc;
+    bottom: 0;
+    cursor: pointer;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    background-color: #000000;
+    bottom: 4px;
+    content: "";
+    height: 26px;
+    left: 4px;
+    position: absolute;
+    transition: .4s;
+    width: 26px;
+  }
+  
+  input:checked + .slider {
+    background-color: #ffffff;
+  }
+  
+  input:checked + .slider:before {
+    transform: translateX(26px);
+  }
+  
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }

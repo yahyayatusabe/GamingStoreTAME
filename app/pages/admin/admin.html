@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar sesión</title>
+    <link rel="stylesheet" href="/style2.css">
+    <link rel="stylesheet" href="/indexbicis.css">
+    <script src="/productosService.js" defer></script>
+    <script src="/admin.js" defer></script>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <a href="/admin"><img src="/images/logo.png" alt="Logo" id="logo" style="height: 70px;;"></a>
+        </div>
+        <div>
+            <input type="text" id="searchInput" placeholder="Buscar...">
+            <div id="suggestions" class="suggestions"></div>
+            <button id="searchBtn">Buscar</button>
+        </div>
+        <div class="container">
+            <label class="switch" for="checkbox">
+                <input type="checkbox" id="checkbox" />
+                <div class="slider round"></div>
+            </label>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="/adminagregar">Añadir Producto</a></li>
+                <li><a onclick="CerrarSesion()">Cerrar Sesión</a></li>
+           </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="productos-container">
+        </section>
+    </main>
+    <footer>
+        <p>Creado por Yahya <a href="https://tameformacion.com/" target="_blank">- TAME</a></p>
+    </footer>
+</body>
+<body>
+<main>
+
+</main>
+</body>
+</html>

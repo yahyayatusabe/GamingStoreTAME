@@ -1,0 +1,292 @@
+:root {
+    --primary: 237, 94%, 81%;
+    --background: 266, 16%, 92%;
+    --background-secondary: 256, 12%, 12%;
+    --background-secondary-dark: 256, 10%, 10%;
+    --background-secondary-light: 257, 11%, 16%;
+    --text-primary: 0, 0%, 0%;
+    --white: 0, 0%, 100%;
+    --quite-gray: 0, 0%, 50%;
+    --heading-medium: 3.6rem;
+    --heading-small: 2.4rem;
+    --paragraph: 1.11rem;
+    --navbar-buttons: 2.4rem;
+    --font-main: "Poppins";
+    --transition-main: .175, .685, .32;
+}
+
+/* Global Styles */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+html, body {
+    margin: 0;
+    width: 100%;
+    color: hsl(var(--text-primary));
+    font-family: var(--font-main);
+    background-color: hsl(var(--background));
+    -webkit-font-smoothing: antialiased;
+    scroll-behavior: smooth;
+}
+.navbar-item-inner-icon-wrapper .ion-icon {
+    font-size: calc(var(--navbar-buttons) - 1rem);
+    color: hsl(var(--quite-gray));
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+}
+h2 {
+    font-size: var(--heading-medium);
+    font-weight: 900;
+}
+h3 {
+    font-size: var(--heading-small);
+    font-weight: 800;
+}
+p {
+    font-size: var(--paragraph);
+}
+a {
+    color: hsla(var(--primary), 1);
+    font-size: var(--paragraph);
+    text-decoration: underline;
+}
+a:visited {
+    color: hsla(var(--primary), .5);
+}
+
+/* Buttons */
+button {
+    padding: .8em 1.2em;
+    border: 1px solid hsl(var(--text-primary));
+    background-color: hsl(var(--background));
+    font-size: var(--paragraph);
+    cursor: pointer;
+    outline: none;
+}
+button:focus {
+    box-shadow: 0 0 0 2px hsl(var(--text-primary)), 0 0 0 3px hsl(var(--white));
+    border: 1px solid transparent;
+}
+
+/* Lists */
+ul, ol {
+    margin: 1em 0;
+}
+
+/* Forms */
+input, textarea, select {
+    padding: .8em 1.2em;
+    font-size: var(--paragraph);
+    background-color: hsl(var(--background));
+    border: 2px solid hsl(var(--background));
+    outline: none;
+    transition: all .2s ease-in-out;
+}
+input:hover, input:focus, textarea:hover, textarea:focus {
+    box-shadow: 0 0 0 2px hsl(var(--text-primary)), 0 0 0 3px hsl(var(--white));
+    border: 2px solid transparent;
+}
+
+/* Flexbox */
+.flexbox, .flexbox-left, .flexbox-right, .flexbox-col, .flexbox-col-left, .flexbox-col-left-ns, .flexbox-col-right, .flexbox-col-start-center, .flexbox-space-bet {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.flexbox-left {
+    justify-content: flex-start;
+}
+.flexbox-right {
+    justify-content: flex-end;
+}
+.flexbox-col {
+    flex-direction: column;
+}
+.flexbox-col-left, .flexbox-col-left-ns {
+    flex-direction: column;
+    align-items: flex-start;
+}
+.flexbox-col-right {
+    flex-direction: column;
+    align-items: flex-end;
+}
+.flexbox-col-start-center {
+    flex-direction: column;
+}
+.flexbox-space-bet {
+    justify-content: space-between;
+}
+
+/* View Width */
+.view-width {
+    width: 70%;
+}
+
+/* Navbar */
+#navbar {
+    top: 0;
+    padding: 0;
+    width: 5em;
+    height: 100vh;
+    position: fixed;
+    background-color: hsl(var(--background-secondary));
+    transition: width .35s cubic-bezier(var(--transition-main), 1);
+    overflow-y: auto;
+}
+#navbar:hover {
+    width: 16em;
+}
+#navbar::-webkit-scrollbar-track, #navbar::-webkit-scrollbar {
+    background-color: hsl(var(--background-secondary));
+}
+#navbar::-webkit-scrollbar {
+    width: 8px;
+}
+#navbar::-webkit-scrollbar-thumb {
+    background-color: hsl(var(--primary));
+}
+.navbar-items {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+.navbar-logo {
+    margin: 0 0 2em;
+    width: 100%;
+    height: 5em;
+    background: hsl(var(--background-secondary-dark));
+}
+.navbar-logo > .navbar-item-inner {
+    width: calc(5rem - 8px);
+}
+.navbar-logo > .navbar-item-inner:hover {
+    background-color: transparent;
+}
+.navbar-logo > .navbar-item-inner > svg {
+    height: 2em;
+    fill: hsl(var(--white));
+}
+.navbar-item-inner-icon-wrapper {
+    width: calc(5rem - 1em - 8px);
+    position: relative;
+}
+.navbar-item {
+    padding: 0 .5em;
+    width: 100%;
+    cursor: pointer;
+}
+.navbar-item-inner {
+    padding: 1em 0;
+    width: 100%;
+    position: relative;
+    color: hsl(var(--quite-gray));
+    border-radius: .25em;
+    text-decoration: none;
+    transition: all .2s cubic-bezier(var(--transition-main), 1);
+}
+.navbar-item-inner:hover {
+    color: hsl(var(--white));
+    background: hsl(var(--background-secondary-light));
+    box-shadow: 0 17px 30px -10px hsla(var(--text-primary), .25);
+}
+.link-text {
+    margin: 0;
+    width: 0;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    transition: all .35s cubic-bezier(var(--transition-main), 1);
+    overflow: hidden;
+    opacity: 0;
+}
+#navbar:hover .link-text {
+    width: calc(100% - calc(5rem - 8px));
+    opacity: 1;
+}
+
+/* Main */
+#main {
+    margin: 0 0 0 5em;
+    min-height: 150vh;
+}
+#main > h2, #main > p {
+    width: 80%;
+    max-width: 80%;
+}
+
+/* ::Selectors */
+::selection {
+    color: hsl(var(--white));
+    background: hsla(var(--primary), .33);
+}
+::-webkit-scrollbar-track, ::-webkit-scrollbar {
+    background-color: hsl(var(--background));
+}
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-thumb {
+    background-color: hsl(var(--primary));
+}
+
+/* @media rules */
+@media only screen and (max-width: 1660px) {
+    :root {
+        --heading-medium: 3.4rem;
+        --heading-small: 2.2rem;
+    }
+}
+@media only screen and (max-width: 1456px) {
+    :root {
+        --heading-medium: 3.2rem;
+        --heading-small: 2rem;
+    }
+    .view-width {
+        width: 80%;
+    }
+}
+@media only screen and (max-width: 1220px) {
+    .view-width {
+        width: 70%;
+    }
+}
+@media only screen and (max-width: 1024px) {
+    :root {
+        --heading-medium: 3rem;
+        --heading-small: 1.8rem;
+    }
+    .view-width {
+        width: 75%;
+    }
+}
+@media only screen and (max-width: 756px) {
+    :root {
+        --heading-medium: 2.6rem;
+        --heading-small: 1.6rem;
+        --paragraph: 1rem;
+        --navbar-buttons: 2.2rem;
+    }
+    .view-width {
+        width: calc(100% - 5em);
+    }
+}
+@media only screen and (max-width: 576px) {
+    .view-width {
+        width: calc(100% - 3em);
+    }
+}
+
+#cuenta-carrito{
+    background-color: var(--color-acento);
+    border-radius: 100%;
+    display: inline-block;
+    width: 20px;
+    line-height: 20px;
+    aspect-ratio: 1;
+    text-align: center;
+    position: absolute;
+}
+
+

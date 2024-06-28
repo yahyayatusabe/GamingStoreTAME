@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    <link rel="stylesheet" href="/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <script type="module" src="/register.js" defer></script>
+</head>
+<body>
+    <main>
+        <div class="form-container">
+            <h1>Crear tu cuenta</h1>
+            <p>Crea tu cuenta para acceder al área de administración</p>
+            <form action="" id="register-form">
+                <label for="user" class="sr-only">User</label>
+                <input type="text" name="user" id="user" placeholder="Nombre de usuario" pattern="[a-z]+" title="El nombre de usuario debe contener solo letras minúsculas" required>
+                
+                <label for="email" class="sr-only">Email</label>
+                <input type="email" name="email" id="email" placeholder="Correo electrónico" required>
+                
+                <div id="app" class="input_container">
+                    <ul>
+                        <li v-bind:class="{ is_valid: contains_eight_characters }">8 Caracteres</li>
+                        <li v-bind:class="{ is_valid: contains_number }">Contiene un número</li>
+                        <li v-bind:class="{ is_valid: contains_uppercase }">Contiene una mayúscula</li>
+                        <li v-bind:class="{ is_valid: contains_special_character }">Contiene un carácter especial</li>
+                    </ul>
+                    <div class="checkmark_container" v-bind:class="{ show_checkmark: valid_password }">
+                        <svg width="50%" height="50%" viewBox="0 0 140 100">
+                            <path class="checkmark" v-bind:class="{ checked: valid_password }" d="M10,50 l25,40 l95,-70" />
+                        </svg>
+                    </div>
+                    <label for="password" class="sr-only">Password</label>
+                    <input type="password" name="password" id="password" @input="checkPassword" v-model="password" placeholder="Ingresa la contraseña" required>
+                </div>
+                
+                <label for="confirm-password" class="sr-only">Confirm Password</label>
+                <input type="password" name="confirm-password" id="confirm-password" placeholder="Repite la contraseña" required>
+                
+                <button type="submit">Registrarse</button>
+                <p class="error escondido">Error al registrarse</p>
+            </form>
+            <p>¿Tienes ya una cuenta? - <a href="/login">Iniciar sesión</a></p>
+        </div>
+    </main>
+</body>
+</html>

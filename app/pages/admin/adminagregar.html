@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar sesión</title>
+    <link rel="stylesheet" href="/adminagregar.css">
+    <link rel="stylesheet" href="/style2.css">
+    <script src="/adminagregar.js" defer></script>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <a href="./"><img src="/images/logo.png" alt="Logo" id="logo" style="height: 70px;"></a>
+        </div>
+        <div>
+            <input type="text" id="searchInput" placeholder="Buscar...">
+            <button id="searchBtn">Buscar</button>
+        </div>
+        <div>
+            <label class="switch" for="checkbox">
+                <input type="checkbox" id="checkbox" />
+                <div class="slider round"></div>
+            </label>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="/adminagregar">Añadir Producto</a></li>
+                <li><a onclick="CerrarSesion()">Cerrar Sesión</a></li>
+           </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+            <div class="image-section">
+                <div class="border">
+                    <div class="frame">
+                        <div class="image" style="background-image: url(https://source.unsplash.com/featured/600x1000)"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-section">
+                <div class="input_wrap">
+                    <input type="text" id="nombre" placeholder="Nombre del juego" data-inp="0" />
+                    <label for="nombre">Nombre</label>
+                </div>
+                <div class="input_wrap">
+                    <input type="number" id="precio" placeholder="Precio con . para dividir decimales" data-inp="1" step="0.01" />
+                    <label for="precio">Precio</label>
+                </div>
+                <div class="input_wrap">
+                    <input type="text" id="urlimagen" placeholder="URL de la imagen" data-inp="2" />
+                    <label for="urlimagen">URL</label>
+                </div>
+                <div class="input_wrap">
+                    <button type="submit" id="submitBtn">Añadir Producto</button>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
